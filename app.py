@@ -54,7 +54,7 @@ def home():
 @app.route('/success' , methods = ['GET' , 'POST'])
 def success():
     error = ''
-    target_img = os.path.join(os.getcwd() , 'C:/studies/Fall Semester/BigData analytics and applications/test-project-flask/Flask/CIFAR-10-image-classification/Testing-data')
+    target_img = os.path.join(os.getcwd() , 'Normal-1.png')
     if request.method == 'POST':
         if(request.form):
             link = request.form.get('link')
