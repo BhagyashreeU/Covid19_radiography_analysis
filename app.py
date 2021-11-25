@@ -92,11 +92,11 @@ def success():
         elif (request.files):
             file = request.files['file']
             if file and allowed_file(file.filename):
-                file.save(os.path.join(target_img , file.filename))
-                img_path = os.path.join(target_img , file.filename)
+                #file.save(os.path.join(target_img , file.filename))
+                #img_path = os.path.join(target_img , file.filename)
                 img = file.filename
 
-                class_result , prob_result = predict(img_path , model)
+                class_result , prob_result = predict(file, model)
 
                 predictions = {
                       "class1":class_result[0],
