@@ -54,7 +54,7 @@ def home():
 @app.route('/success' , methods = ['GET' , 'POST'])
 def success():
     error = ''
-    target_img = os.path.join(os.getcwd() , 'Normal-1.png')
+    target_img = './Normal-1.png'
     if request.method == 'POST':
         if(request.form):
             link = request.form.get('link')
